@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import globalStyles from './styles/global'
 import styles from './styles/layout'
+import Nav from './Nav.js';
 
 export default props => (
   <div>
@@ -9,11 +9,8 @@ export default props => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
-    <nav>
-      <Link href="/movies"><a>Movies</a></Link>
-      <Link href="/people"><a>People</a></Link>
-    </nav>
     <div id="main">
+      <Nav />
       {props.children}
     </div>
     <footer>

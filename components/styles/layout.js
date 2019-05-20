@@ -14,23 +14,4 @@ footer img {
   width: auto;
   padding: 0 0.4em;
 }
-
-nav {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  font-size: 1rem;
-  height: 3.5rem;
-}
-
-nav a {
-  flex-grow: 1;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-}
 `
