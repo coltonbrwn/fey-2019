@@ -11,6 +11,7 @@ export default css`
     font-size: 1rem;
     background: #FFF;
     color: #000;
+    z-index: 10;
   }
 
   .marquee {

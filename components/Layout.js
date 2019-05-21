@@ -2,6 +2,7 @@ import Head from 'next/head'
 import globalStyles from './styles/global'
 import styles from './styles/layout'
 import Nav from './Nav.js';
+import Footer from './Footer.js';
 
 export default props => (
   <div>
@@ -13,9 +14,7 @@ export default props => (
       <Nav />
       {props.children}
     </div>
-    <footer>
-
-    </footer>
+    <Footer />
     <style jsx>{styles}</style>
     <style jsx global>{globalStyles}</style>
   </div>
