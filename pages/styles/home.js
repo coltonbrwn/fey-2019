@@ -21,6 +21,8 @@ export default css`
     overflow: hidden;
     text-transform: uppercase;
     word-spacing: 0.4em;
+    white-space: nowrap;
+    position: relative;
   }
   .marquee-2 span {
     white-space: nowrap;

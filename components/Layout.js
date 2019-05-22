@@ -12,10 +12,10 @@ export default props => (
     </Head>
     <div id="main">
       <Nav />
-      {props.children}
+      { props.children }
     </div>
     <Footer />
-    <style jsx>{styles}</style>
-    <style jsx global>{globalStyles}</style>
+    <style jsx>{ styles }</style>
+    <style jsx global>{ globalStyles }</style>
   </div>
 )

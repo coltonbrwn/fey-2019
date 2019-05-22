@@ -7,6 +7,7 @@ import FeyWindow from '../components/FeyWindow';
 import Layout from '../components/Layout';
 import FeyTitle1 from '../components/svg/CdF_Title_1.svg'
 import FeyTitle2 from '../components/svg/CdF_Title_2.svg'
+import Marquee from '../components/Marquee';
 import sanity from '../lib/sanity'
 import sanityClient from '../lib/sanity'
 import styles from './styles/home'
@@ -117,7 +118,10 @@ export default class Home extends React.Component {
           </div>
         </div>
         <div className="container marquee-2 lorg border-bottom">
-          <span>Music Gastronomy Talks Performance Music Gastronomy Talks Performance Music Gastronomy Talks Performance Music Gastronomy Talks Performance Music Gastronomy Talks Performance Music Gastronomy Talks Performance</span>
+          <Marquee
+            text="Music Gastronomy Talks Performance"
+            reverse={true}
+          />
         </div>
         <style jsx>{styles}</style>
       </Layout>

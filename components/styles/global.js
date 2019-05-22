@@ -48,12 +48,13 @@ h4 {
 p {
   font-size: 1rem;
   margin-top: 0;
+  margin-bottom: 1em;
 }
 
 
 
 #main {
-  padding-top: 7rem;
+  padding-top: 9rem;
 }
 .wing {
   font-family: Wingdings;
