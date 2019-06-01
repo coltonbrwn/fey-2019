@@ -88,7 +88,7 @@ export default class Home extends React.Component {
                   shape="ornamental"
                   aspect="1"
                 >
-                  <FeyTitle2 />
+                  <img draggable={false} src="/static/cdf-title-2.png" />
                 </FeyWindow>
               </div>
               <div className="border-bottom pad flex-1">
@@ -103,7 +103,7 @@ export default class Home extends React.Component {
                   shape="centered"
                   aspect="1"
                 >
-                  <FeyTitle1 />
+                  <img draggable={false} src="/static/cdf-title-1.png" />
                 </FeyWindow>
               </div>
               <div className="pad flex-1">

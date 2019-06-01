@@ -41,6 +41,7 @@ export default class FeyWindow extends React.Component {
     if (this.props.imageBuilder) {
       element = (
         <img
+          draggable={ false }
           className={ className }
           src={ this.getImageUrl() }
         />

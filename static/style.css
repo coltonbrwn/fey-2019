@@ -25,6 +25,15 @@ html {
     font-size: 13px;
   }
 }
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
 body {
   margin: 0;
   font-family: Monday, serif;
@@ -243,8 +252,8 @@ nav a {
   text-align: center;
 }
 
-img {
-  /* width: 100%; */
+.container img {
+  width: 100%;
 }
 .home-container__left {
   display: flex;

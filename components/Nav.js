@@ -7,7 +7,7 @@ const ticketsCopy = 'TICKETS EN VENTE LE 15 JUIN  —  TICKETS ON SALE JUNE 15  
 const Nav = props => (
   <div>
     <div className="nav-logo-dummy">
-      <img src="/static/fey-logo.png" />
+      <img draggable={ false } src="/static/fey-logo.png" />
     </div>
     <nav className="border-bottom">
       <div className="marquee border-bottom">
