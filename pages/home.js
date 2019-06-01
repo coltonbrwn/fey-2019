@@ -5,8 +5,8 @@ import imageUrlBuilder from '@sanity/image-url'
 
 import FeyWindow from '../components/FeyWindow';
 import Layout from '../components/Layout';
-import FeyTitle1 from '../components/svg/CdF_Title_1.svg'
-import FeyTitle2 from '../components/svg/CdF_Title_2.svg'
+import FeyTitle1 from '../components/svg/CdF_Title_1'
+import FeyTitle2 from '../components/svg/CdF_Title_2'
 import Marquee from '../components/Marquee';
 import sanity from '../lib/sanity'
 import sanityClient from '../lib/sanity'

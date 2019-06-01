@@ -11,7 +11,7 @@ const Nav = props => (
     <nav className="border-bottom">
       <div className="marquee border-bottom">
         <Marquee
-          text="Tickets Billets"
+          text="Tickets On Sale June 15th –– "
         />
       </div>
       <div className="nav-logo">

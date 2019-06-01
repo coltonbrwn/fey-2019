@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ANIMATION_MS = 1000000;
+const ANIMATION_MS = 1300000;
 const NUM_COPIES = 100;
 const MAX_DISTANCE = 100000;
 
