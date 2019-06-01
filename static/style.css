@@ -15,6 +15,16 @@
 html {
   font-size: 20px;
 }
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 740px) {
+  html {
+    font-size: 13px;
+  }
+}
 body {
   margin: 0;
   font-family: Monday, serif;
@@ -99,6 +109,11 @@ a:hover {
 .container {
   display: flex;
   width: 100%;
+}
+@media screen and (max-width: 550px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 .fey-window {

@@ -10,6 +10,12 @@ export default class FeyWindow extends React.Component {
     }
   }
 
+  componentDidMount() {
+    document.addEventListener('visibilitychange', () => {
+      this.forceUpdate();
+    })
+  }
+
   getImageUrl() {
     const { aspect, imageBuilder } = this.props;
     if (!imageBuilder) {

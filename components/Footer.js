@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-import styles from './styles/nav'
 import FeyWindow from './FeyWindow'
 import WritingHand from './svg/writing-hand'
 

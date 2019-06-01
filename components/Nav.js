@@ -1,7 +1,8 @@
 import Link from 'next/link'
 
 import Marquee from './Marquee';
-import styles from './styles/nav'
+
+const ticketsCopy = 'TICKETS EN VENTE LE 15 JUIN  —  TICKETS ON SALE JUNE 15  —  ';
 
 const Nav = props => (
   <div>
@@ -10,9 +11,7 @@ const Nav = props => (
     </div>
     <nav className="border-bottom">
       <div className="marquee border-bottom">
-        <Marquee
-          text="Tickets On Sale June 15th –– "
-        />
+        <Marquee text={ ticketsCopy } />
       </div>
       <div className="nav-logo">
         <img src="/static/fey-logo.png" />
