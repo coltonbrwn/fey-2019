@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ANIMATION_MS = 1300000;
+const ANIMATION_MS = 15000;
 const NUM_COPIES = 100;
-const MAX_DISTANCE = 100000;
+const MAX_DISTANCE = 2000;
 
 export default class Marquee extends React.Component {
 

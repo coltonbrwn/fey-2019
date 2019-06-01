@@ -10,7 +10,6 @@ import FeyTitle2 from '../components/svg/CdF_Title_2'
 import Marquee from '../components/Marquee';
 import sanity from '../lib/sanity'
 import sanityClient from '../lib/sanity'
-import styles from './styles/home'
 
 const imageBuilder = imageUrlBuilder(sanityClient)
 
@@ -123,7 +122,6 @@ export default class Home extends React.Component {
             reverse={true}
           />
         </div>
-        <style jsx>{styles}</style>
       </Layout>
     )
   }

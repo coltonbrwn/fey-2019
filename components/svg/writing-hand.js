@@ -13,5 +13,5 @@ const svg = `
 `;
 
 export default props => (
-  <div dangerouslySetInnerHTML={{ __html: svg }} />
+  <span dangerouslySetInnerHTML={{ __html: svg }} />
 )

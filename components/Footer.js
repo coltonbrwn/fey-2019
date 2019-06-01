@@ -4,6 +4,9 @@ import styles from './styles/nav'
 import FeyWindow from './FeyWindow'
 import WritingHand from './svg/writing-hand'
 
+const newsletterLink = 'https://us19.campaign-archive.com/home/?u=b1b6b4c1970d5e0d255d664b4&id=3d70d4b976';
+const sociaLink = 'https://www.instagram.com/fey_arts_/';
+
 const Footer = props => (
   <footer>
     <div className="container">
@@ -14,7 +17,9 @@ const Footer = props => (
             shape="ornamental"
           >
             <div className="lorg">
-              Email <WritingHand />
+              <a href={ newsletterLink } target="_blank">
+                Subscribe <WritingHand />
+              </a>
             </div>
           </FeyWindow>
         </div>
@@ -26,7 +31,9 @@ const Footer = props => (
             shape="oval"
           >
             <div className="lorg">
-              @fey_arts_
+              <a href={ sociaLink } target="_blank">
+                @fey_arts_
+              </a>
             </div>
           </FeyWindow>
         </div>

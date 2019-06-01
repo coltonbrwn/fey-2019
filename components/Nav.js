@@ -17,7 +17,6 @@ const Nav = props => (
       <div className="nav-logo">
         <img src="/static/fey-logo.png" />
       </div>
-      <style jsx global>{ styles }</style>
     </nav>
   </div>
 );
