@@ -35,7 +35,7 @@ export default props => (
       <link rel="stylesheet" href="/static/style.css" />
     </Head>
     <div id="main">
-      <Nav />
+      <Nav marquees={ props.marquees }/>
       { props.children }
     </div>
     <Footer />

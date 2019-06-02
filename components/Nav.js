@@ -4,6 +4,14 @@ import Marquee from './Marquee';
 
 const ticketsCopy = 'TICKETS EN VENTE LE 15 JUIN  —  TICKETS ON SALE JUNE 15  —  ';
 
+const getTicketsText = props => {
+  try {
+    return props.marquees.find( item => item.title === 'Tickets' ).text
+  } catch (e) {
+    return;
+  }
+}
+
 const Nav = props => (
   <div>
     <div className="nav-logo-dummy">
@@ -11,7 +19,7 @@ const Nav = props => (
     </div>
     <nav className="border-bottom">
       <div className="marquee border-bottom">
-        <Marquee text={ ticketsCopy } />
+        <Marquee text={ getTicketsText(props) } />
       </div>
       <div className="nav-logo">
         <img src="/static/fey-logo.png" />

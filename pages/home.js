@@ -23,28 +23,45 @@ const contentQuery = `*[_type == "bilingualText" && title == "Overview"] {
   body_en,
   body_fr
 }[0...1]
-`
+`;
+const marqueeQuery = `*[_type == "marquees"] {
+  _id,
+  text,
+  title
+}
+`;
 
 export default class Home extends React.Component {
 
   static async getInitialProps() {
     return {
       imagery: await sanity.fetch(imagesQuery),
-      content: await sanity.fetch(contentQuery)
+      content: await sanity.fetch(contentQuery),
+      marquees: await sanity.fetch(marqueeQuery)
     }
   }
 
   getImage(tagName) {
-    const img = this.props.imagery[0].images.find( img => tagName === img.tag );
-    if (img) {
+    try {
+      const img = this.props.imagery[0].images.find( img => tagName === img.tag );
       return imageBuilder.image(img.image);
+    } catch (e) {
+      return;
+    }
+  }
+
+  getMarqueeText() {
+    try {
+      return this.props.marquees.find( item => item.title === 'Disciplines' ).text;
+    } catch (e) {
+      return;
     }
   }
 
   render() {
     const homepageContent = this.props.content[0];
     return (
-      <Layout>
+      <Layout marquees={ this.props.marquees }>
         <div className="container border-bottom">
           <div className="home-container__left border-right">
             <div className="pad">
@@ -88,7 +105,10 @@ export default class Home extends React.Component {
                   shape="ornamental"
                   aspect="1"
                 >
-                  <img draggable={false} src="/static/cdf-title-2.png" />
+                  <img
+                    draggable={false}
+                    src={ this.getImage('fey-text-top').url() }
+                  />
                 </FeyWindow>
               </div>
               <div className="border-bottom pad flex-1">
@@ -103,7 +123,10 @@ export default class Home extends React.Component {
                   shape="centered"
                   aspect="1"
                 >
-                  <img draggable={false} src="/static/cdf-title-1.png" />
+                  <img
+                    draggable={false}
+                    src={ this.getImage('fey-text-bottom').url() }
+                  />
                 </FeyWindow>
               </div>
               <div className="pad flex-1">
@@ -118,7 +141,7 @@ export default class Home extends React.Component {
         </div>
         <div className="container marquee-2 lorg border-bottom">
           <Marquee
-            text="Music Gastronomy Talks Performance"
+            text={ this.getMarqueeText() }
             reverse={true}
           />
         </div>
