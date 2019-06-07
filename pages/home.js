@@ -6,12 +6,11 @@ import imageUrlBuilder from '@sanity/image-url'
 import FeyWindow from '../components/FeyWindow';
 import Layout from '../components/Layout';
 import FeyPoster from '../components/FeyPoster';
-import FeyTitle1 from '../components/svg/CdF_Title_1'
-import FeyTitle2 from '../components/svg/CdF_Title_2'
 import Marquee from '../components/Marquee';
 import sanity from '../lib/sanity'
 import sanityClient from '../lib/sanity'
 import WritingHand from '../components/svg/writing-hand'
+import IG from '../components/svg/ig'
 
 const newsletterLink = 'https://us19.campaign-archive.com/home/?u=b1b6b4c1970d5e0d255d664b4&id=3d70d4b976';
 const sociaLink = 'https://www.instagram.com/fey_arts_/';
@@ -105,8 +104,9 @@ export default class Home extends React.Component {
               <div className="border-right flex-1 text-center">
                 <div className="pad">
                   <h4>
+                    <WritingHand />
                     <a href={ newsletterLink } target="_blank">
-                      Subscribe <WritingHand />
+                      Subscribe
                     </a>
                   </h4>
                 </div>
@@ -114,8 +114,9 @@ export default class Home extends React.Component {
               <div className="flex-1 text-center">
                 <div className="pad">
                   <h4>
+                    <IG />
                     <a href={ sociaLink } target="_blank">
-                      @fey_arts_
+                      fey_arts_
                     </a>
                   </h4>
                 </div>
