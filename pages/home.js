@@ -66,7 +66,7 @@ export default class Home extends React.Component {
     return (
       <Layout marquees={ this.props.marquees }>
         <div className="container border-bottom">
-          <div className="home-container__left border-right">
+          <div className="home-container__left border-right border-left">
             <div className="pad">
               <FeyWindow
                 shape="oval"
@@ -123,7 +123,7 @@ export default class Home extends React.Component {
               </div>
             </div>
           </div>
-          <div className="home-container__right">
+          <div className="home-container__right border-right">
             <div className="flex flex--column h-100">
               <div className="border-bottom rel">
                 <FeyPoster />

@@ -14,7 +14,7 @@ const getTicketsText = props => {
 
 const Nav = props => (
   <div>
-    <nav className="border-bottom">
+    <nav className="border">
       <div className="marquee border-bottom">
         <h4>
           <Marquee text={ getTicketsText(props) } />
