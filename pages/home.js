@@ -5,12 +5,16 @@ import imageUrlBuilder from '@sanity/image-url'
 
 import FeyWindow from '../components/FeyWindow';
 import Layout from '../components/Layout';
+import FeyPoster from '../components/FeyPoster';
 import FeyTitle1 from '../components/svg/CdF_Title_1'
 import FeyTitle2 from '../components/svg/CdF_Title_2'
 import Marquee from '../components/Marquee';
 import sanity from '../lib/sanity'
 import sanityClient from '../lib/sanity'
+import WritingHand from '../components/svg/writing-hand'
 
+const newsletterLink = 'https://us19.campaign-archive.com/home/?u=b1b6b4c1970d5e0d255d664b4&id=3d70d4b976';
+const sociaLink = 'https://www.instagram.com/fey_arts_/';
 const imageBuilder = imageUrlBuilder(sanityClient)
 
 const imagesQuery = `*[_type == "imagery" && title == "Homepage"] {
@@ -71,10 +75,12 @@ export default class Home extends React.Component {
                 imageBuilder={ this.getImage('fey-backyard') }
               />
             </div>
+            <div className="">
+              <FeyPoster />
+            </div>
             <div className="border-top border-bottom flex">
               <div className="pad border-right flex-1">
                 <div className="home-text-inner">
-                  <p>EN</p>
                   <BlockContent
                     blocks={ homepageContent.body_en }
                   />
@@ -82,7 +88,6 @@ export default class Home extends React.Component {
               </div>
               <div className="pad italic flex-1">
                 <div className="home-text-inner">
-                  <p>FR</p>
                   <BlockContent
                     blocks={ homepageContent.body_fr }
                   />
@@ -96,20 +101,31 @@ export default class Home extends React.Component {
                 imageBuilder={ this.getImage('fey-aerial') }
               />
             </div>
+            <div className="flex border-top">
+              <div className="border-right flex-1 text-center">
+                <div className="pad">
+                  <h4>
+                    <a href={ newsletterLink } target="_blank">
+                      Subscribe <WritingHand />
+                    </a>
+                  </h4>
+                </div>
+              </div>
+              <div className="flex-1 text-center">
+                <div className="pad">
+                  <h4>
+                    <a href={ sociaLink } target="_blank">
+                      @fey_arts_
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="home-container__right">
             <div className="flex flex--column h-100">
-              <div className="border-bottom pad">
-                <FeyWindow
-                  background="#e3aaec"
-                  shape="ornamental"
-                  aspect="1"
-                >
-                  <img
-                    draggable={false}
-                    src={ this.getImage('fey-text-top').url() }
-                  />
-                </FeyWindow>
+              <div className="border-bottom flex-1 rel">
+                <FeyPoster />
               </div>
               <div className="border-bottom pad flex-1">
                 <FeyWindow
@@ -119,17 +135,15 @@ export default class Home extends React.Component {
                 />
               </div>
               <div className="border-bottom pad">
-                <FeyWindow
-                  shape="centered"
-                  aspect="1"
-                >
-                  <img
-                    draggable={false}
-                    src={ this.getImage('fey-text-bottom').url() }
-                  />
-                </FeyWindow>
+                <div>
+                  <h2 className="poster-text-2">
+                    Château <br/>
+                    du Feÿ,<br/>
+                    Bourgogne
+                  </h2>
+                </div>
               </div>
-              <div className="pad flex-1">
+              <div className="pad">
                 <FeyWindow
                   shape="half-oval"
                   aspect="1"
@@ -138,12 +152,6 @@ export default class Home extends React.Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="container marquee-2 lorg border-bottom">
-          <Marquee
-            text={ this.getMarqueeText() }
-            reverse={true}
-          />
         </div>
       </Layout>
     )

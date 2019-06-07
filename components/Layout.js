@@ -32,6 +32,8 @@ export default props => (
       <title>Fey – Rencontres d&#039;arts &#8211; Multidisciplinary artistic festival in Burgundy. 20-22 September 2019</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600&display=swap" rel="stylesheet"/> 
       <link rel="stylesheet" href="/static/style.css" />
     </Head>
     <div id="main">

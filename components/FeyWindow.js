@@ -29,9 +29,8 @@ export default class FeyWindow extends React.Component {
 
   render() {
     const { shape } = this.props;
-    const className = `fey-window fey-window--${ shape }`
     let element = (
-      <div className={ className }>
+      <div>
         <div className="fw-pseudo" style={{ background: this.props.background }} />
         <div className="fw-inner">
           { this.props.children }
@@ -42,7 +41,6 @@ export default class FeyWindow extends React.Component {
       element = (
         <img
           draggable={ false }
-          className={ className }
           src={ this.getImageUrl() }
         />
       );

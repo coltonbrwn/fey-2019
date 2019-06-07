@@ -14,12 +14,11 @@ const getTicketsText = props => {
 
 const Nav = props => (
   <div>
-    <div className="nav-logo-dummy">
-      <img draggable={ false } src="/static/fey-logo.png" />
-    </div>
     <nav className="border-bottom">
       <div className="marquee border-bottom">
-        <Marquee text={ getTicketsText(props) } />
+        <h4>
+          <Marquee text={ getTicketsText(props) } />
+        </h4>
       </div>
       <div className="nav-logo">
         <img src="/static/fey-logo.png" />
