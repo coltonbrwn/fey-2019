@@ -262,6 +262,9 @@ nav a {
   .home-container__left .fey-poster {
     display: none;
   }
+  .noborderdesk {
+    border: none;
+  }
 }
 .home-container__right h1 {
 

@@ -4,10 +4,10 @@ import FeyPoster from './svg/fey-poster.js';
 
 export default props => (
   <div className="fey-poster">
-    <div className="flex-1 pad border-top">
+    <div className="flex-1 pad">
       <FeyPoster />
     </div>
-    <div className="poster-text-container flex-1 pad border-top border-left">
+    <div className="poster-text-container flex-1 pad border-left">
       <h3 className="poster-text">
         <span>Art</span><br/>
         <span>Music</span><br/>

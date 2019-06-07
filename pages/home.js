@@ -67,7 +67,7 @@ export default class Home extends React.Component {
       <Layout marquees={ this.props.marquees }>
         <div className="container border-bottom">
           <div className="home-container__left border-right border-left">
-            <div className="pad">
+            <div className="pad border-bottom noborderdesk">
               <FeyWindow
                 shape="oval"
                 aspect="1.27"
