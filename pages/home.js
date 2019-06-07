@@ -72,7 +72,7 @@ export default class Home extends React.Component {
               <FeyWindow
                 shape="oval"
                 aspect="1.27"
-                imageBuilder={ this.getImage('fey-backyard') }
+                imageBuilder={ this.getImage('img-1') }
               />
             </div>
             <div className="">
@@ -98,7 +98,7 @@ export default class Home extends React.Component {
               <FeyWindow
                 shape="oval"
                 aspect="1.4"
-                imageBuilder={ this.getImage('fey-aerial') }
+                imageBuilder={ this.getImage('img-3') }
               />
             </div>
             <div className="flex border-top">
@@ -131,7 +131,7 @@ export default class Home extends React.Component {
                 <FeyWindow
                   shape="oval"
                   aspect="0.65"
-                  imageBuilder={ this.getImage('smokesignals') }
+                  imageBuilder={ this.getImage('img-2') }
                 />
               </div>
               <div className="border-bottom pad">
@@ -147,7 +147,7 @@ export default class Home extends React.Component {
                 <FeyWindow
                   shape="half-oval"
                   aspect="1"
-                  imageBuilder={ this.getImage('dancer') }
+                  imageBuilder={ this.getImage('img-4') }
                 />
               </div>
             </div>
