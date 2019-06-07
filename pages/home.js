@@ -100,7 +100,7 @@ export default class Home extends React.Component {
                 imageBuilder={ this.getImage('img-3') }
               />
             </div>
-            <div className="flex border-top">
+            <div className="flex border-top fey-contact">
               <div className="border-right flex-1 text-center">
                 <div className="pad">
                   <h4>

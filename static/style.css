@@ -93,9 +93,6 @@ sup {
   position: relative;
   bottom: -0.4em;
 }
-svg {
-  height: 1em;
-}
 
 
 
@@ -145,6 +142,15 @@ svg {
 .text-center {
   text-align: center;
 }
+
+
+
+.fey-contact svg {
+  height: 1em;
+}
+.fey-poster svg {
+  height: 10rem;
+}
 .poster-text-container {
   text-align: right;
 }
@@ -163,7 +169,6 @@ svg {
   text-align: center;
   padding: 2em 0;
 }
-
 .container {
   display: flex;
   width: 100%;
