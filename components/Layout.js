@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Nav from './Nav.js';
 import Footer from './Footer.js';
 
-const social_img_url = 'http://fey-arts.com/static/social.jpg';
+const social_img_url = 'http://fey-arts.com/static/social-wide.jpg';
 const title = 'Fey — A multidisciplinary arts festival in Bourgogne. 20-22 September 2019';
 const description = 'Multidisciplinary arts festival in Bourgogne';
 
@@ -12,6 +12,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <Head>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93943838-4"></script>
           <script dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -22,7 +23,7 @@ export default class Home extends React.Component {
                 gtag('config', 'UA-93943838-4');
             `
           }}/>
-          
+
           <meta name="description" content={ description } />
           <meta itemprop="name" content={ title } />
           <meta itemprop="description" content={ description } />
