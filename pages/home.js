@@ -124,7 +124,7 @@ export default class Home extends React.Component {
           </div>
           <div className="home-container__right">
             <div className="flex flex--column h-100">
-              <div className="border-bottom flex-1 rel">
+              <div className="border-bottom rel">
                 <FeyPoster />
               </div>
               <div className="border-bottom pad flex-1">
