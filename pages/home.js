@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import BlockContent from '@sanity/block-content-to-react'
+
+import BilingualBlock from '../components/BilingualBlock';
 
 import FeyWindow from '../components/FeyWindow';
 import Layout from '../components/Layout';
@@ -29,20 +30,7 @@ export default class Home extends Page {
               <FeyPoster />
             </div>
             <div className="border-top border-bottom flex">
-              <div className="pad border-right flex-1">
-                <div className="home-text-inner">
-                  <BlockContent
-                    blocks={ homepageContent.body_en }
-                  />
-                </div>
-              </div>
-              <div className="pad italic flex-1">
-                <div className="home-text-inner">
-                  <BlockContent
-                    blocks={ homepageContent.body_fr }
-                  />
-                </div>
-              </div>
+              <BilingualBlock textblock={ homepageContent } fullw />
             </div>
             <div className="pad">
               <FeyWindow
@@ -51,7 +39,9 @@ export default class Home extends Page {
                 imageBuilder={ this.getImage('img-3') }
               />
             </div>
-            <Social />
+            <div className="border-top">
+              <Social />
+            </div>
           </div>
           <div className="home-container__right border-right">
             <div className="flex flex--column h-100">

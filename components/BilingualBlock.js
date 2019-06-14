@@ -7,7 +7,7 @@ export default class BilingualBlock extends React.Component {
     try {
       return (
         <React.Fragment>
-          <div className="one-third pad border-right">
+          <div className={`pad border-right ${ !this.props.fullw && 'one-third' }`}>
             <p className="bilingual-title">{ this.props.textblock.title_en }</p>
             <div className={`bilingual-block ${ this.props.noindent && 'noindent' }`}>
               <BlockContent
@@ -15,7 +15,7 @@ export default class BilingualBlock extends React.Component {
               />
             </div>
           </div>
-          <div className="one-third pad italic border-right">
+          <div className={`pad ${ !this.props.fullw && 'one-third border-right ' }`}>
             <p className="bilingual-title">{ this.props.textblock.title_fr }</p>
             <div className={`bilingual-block ${ this.props.noindent && 'noindent' }`}>
               <BlockContent

@@ -20,7 +20,9 @@ const Nav = props => (
         </h4>
       </div>
       <div className="nav-logo">
-        <img src="/static/fey-logo.png" />
+        <a href="/">
+          <img src="/static/fey-logo.png" />
+        </a>
       </div>
     </nav>
   </div>
