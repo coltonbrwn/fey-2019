@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 import Marquee from './Marquee';
 
-const ticketsCopy = 'TICKETS EN VENTE LE 15 JUIN  —  TICKETS ON SALE JUNE 15  —  ';
-
 const getTicketsText = props => {
+  console.log(props);
   try {
-    return props.marquees.find( item => item.title === 'Tickets' ).text
+    return props.global.find( item => item.title === 'Tickets Marquee' ).text
   } catch (e) {
+    console.log(e)
     return;
   }
 }

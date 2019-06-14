@@ -21,13 +21,13 @@ const imagesQuery = `*[_type == "imagery" && title == "Homepage"] {
   images
 }[0...1]
 `;
-const contentQuery = `*[_type == "bilingualText" && title == "Overview"] {
+const contentQuery = `*[_type == "aboutText" && title == "Overview"] {
   _id,
   body_en,
   body_fr
 }[0...1]
 `;
-const marqueeQuery = `*[_type == "marquees"] {
+const globalQuery = `*[_type == "global"] {
   _id,
   text,
   title
@@ -40,7 +40,7 @@ export default class Home extends React.Component {
     return {
       imagery: await sanity.fetch(imagesQuery),
       content: await sanity.fetch(contentQuery),
-      marquees: await sanity.fetch(marqueeQuery)
+      global: await sanity.fetch(globalQuery)
     }
   }
 
@@ -53,18 +53,10 @@ export default class Home extends React.Component {
     }
   }
 
-  getMarqueeText() {
-    try {
-      return this.props.marquees.find( item => item.title === 'Disciplines' ).text;
-    } catch (e) {
-      return;
-    }
-  }
-
   render() {
     const homepageContent = this.props.content[0];
     return (
-      <Layout marquees={ this.props.marquees }>
+      <Layout global={ this.props.global }>
         <div className="container border-bottom">
           <div className="home-container__left border-right border-left">
             <div className="pad border-bottom noborderdesk">

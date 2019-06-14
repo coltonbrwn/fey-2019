@@ -47,7 +47,7 @@ export default class Home extends React.Component {
 
         </Head>
         <div id="main">
-          <Nav marquees={ this.props.marquees }/>
+          <Nav {...this.props } />
           { this.props.children }
         </div>
         <Footer />
