@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Marquee from './Marquee';
 
 const getTicketsText = props => {
-  console.log(props);
   try {
     return props.global.find( item => item.title === 'Tickets Marquee' ).text
   } catch (e) {

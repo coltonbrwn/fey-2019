@@ -50,7 +50,6 @@ export default class Home extends React.Component {
           <Nav {...this.props } />
           { this.props.children }
         </div>
-        <Footer />
       </div>
     )
   }
