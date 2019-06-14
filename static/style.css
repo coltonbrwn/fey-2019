@@ -30,6 +30,7 @@ img {
 }
 
 body {
+  overflow: hidden;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -98,7 +99,9 @@ sup {
 
 
 #main {
-  padding-top: 9rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .wing {
   font-family: Wingdings;
@@ -204,7 +207,6 @@ footer {
   text-align: center;
   font-size: 2rem;
 }
-
 footer img {
   display: inline-block;
   height: 1em;
@@ -213,7 +215,7 @@ footer img {
 }
 
 nav {
-  position: fixed;
+  /* position: fixed; */
   align-items: center;
   top: 0;
   left: 0;
@@ -224,9 +226,16 @@ nav {
   color: #000;
   z-index: 10;
   box-sizing: border-box;
-  /* overflow: hidden; */
 }
-
+.nav-ham {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  cursor: pointer;
+}
+.nav-ham svg {
+  height: 2em;
+}
 .marquee {
   height: 4.6rem;
   overflow: hidden;
@@ -235,20 +244,47 @@ nav {
   padding: 1.4rem 0;
   box-sizing: border-box;
 }
-
 .nav-logo {
   text-align: center;
   padding: 0.6rem;
+  position: relative;
 }
 .nav-logo img {
   height: 9rem;
   opacity: 0.9;
+  position: relative;
+  z-index: 100;
 }
-
 nav a {
   flex-grow: 1;
   text-decoration: none;
   text-align: center;
+}
+
+
+.content-main {
+  overflow: hidden;
+}
+.content-main.sidebar--open .content-inner {
+  left: 33vw;
+}
+.content-inner {
+  position: relative;
+  left: 0;
+  height: 100%;
+  overflow-y: scroll;
+  transition: 300ms left;
+  background: white;
+  z-index: 1;
+}
+.sidebar {
+  position: absolute;
+  left: -0;
+  width: 33vw;
+  background: white;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid black;
 }
 
 .container img {

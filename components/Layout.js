@@ -1,12 +1,26 @@
 import Head from 'next/head'
 import Nav from './Nav.js';
 import Footer from './Footer.js';
+import Sidebar from './Sidebar.js';
 
 const social_img_url = 'http://fey-arts.com/static/social-wide.jpg';
 const title = 'Fey — A multidisciplinary arts festival in Bourgogne. 20-22 September 2019';
 const description = 'Multidisciplinary arts festival in Bourgogne';
 
 export default class Home extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      isNavOpen: false
+    }
+  }
+
+  onHamClick = () => {
+    this.setState({
+      isNavOpen: !this.state.isNavOpen
+    });
+  }
 
   render () {
     return (
@@ -47,8 +61,13 @@ export default class Home extends React.Component {
 
         </Head>
         <div id="main">
-          <Nav {...this.props } />
-          { this.props.children }
+          <Nav {...this.props } onHamClick={ this.onHamClick } />
+          <div className={`content-main ${ this.state.isNavOpen && 'sidebar--open' }`}>
+            <Sidebar />
+            <div className="content-inner">
+              { this.props.children }
+            </div>
+          </div>
         </div>
       </div>
     )

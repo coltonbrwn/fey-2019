@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import Hamburg from './svg/ham';
 import Marquee from './Marquee';
 
 const getTicketsText = props => {
@@ -20,6 +21,9 @@ const Nav = props => (
         </h4>
       </div>
       <div className="nav-logo">
+        <div className="nav-ham" onClick={ props.onHamClick }>
+          <Hamburg />
+        </div>
         <a href="/">
           <img src="/static/fey-logo.png" />
         </a>
