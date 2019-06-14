@@ -39,6 +39,10 @@ export default class Home extends React.Component {
     }
   }
 
+  imageBuilder() {
+    return imageBuilder;
+  }
+
   render() {
     return <div />
   }

@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 const Footer = props => (
   <footer>
-    <div className="flex border-top fey-contact">
+    <div className="flex fey-contact">
       <div className="border-right flex-1 text-center">
         <div className="pad">
           <h4>

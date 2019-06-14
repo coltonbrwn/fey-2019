@@ -5,7 +5,7 @@ import BlockContent from '@sanity/block-content-to-react'
 import FeyWindow from '../components/FeyWindow';
 import Layout from '../components/Layout';
 import FeyPoster from '../components/FeyPoster';
-import Social from '../components/Social';
+import Social from '../components/social';
 import Page from '../components/page'
 
 export default class Home extends Page {

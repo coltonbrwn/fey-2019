@@ -82,6 +82,19 @@ sup {
 }
 
 
+.bilingual-title {
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.bilingual-block {
+  text-indent: 3em;
+}
+.bilingual-block.noindent {
+  text-indent: 0;
+  padding-top: 1em;
+}
 
 
 #main {
@@ -101,6 +114,15 @@ sup {
 }
 .flex-1 {
   flex: 1;
+  box-sizing: border-box;
+}
+.flex-2 {
+  flex: 2;
+  box-sizing: border-box;
+}
+.one-third {
+  flex-basis: 33.3333%;
+  box-sizing: border-box;
 }
 .rel {
   position: relative;
