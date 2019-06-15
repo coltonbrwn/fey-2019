@@ -1,5 +1,6 @@
 html {
   font-size: 18px;
+  background: white;
 }
 @media screen and (max-width: 1050px) {
   html {
@@ -18,7 +19,6 @@ html {
   h1 {
     font-size: 2.5rem;
   }
-
 }
 
 img {
@@ -103,9 +103,6 @@ sup {
   display: flex;
   flex-direction: column;
 }
-.wing {
-  font-family: Wingdings;
-}
 .h-100 {
   height: 100%;
 }
@@ -165,14 +162,6 @@ sup {
 .fey-contact svg {
   height: 1em;
 }
-.fey-poster svg {
-  height: 10rem;
-}
-@media screen and (max-width: 500px) {
-  .fey-poster svg {
-    height: 22vw;
-  }
-}
 .poster-text-container {
   text-align: left;
 }
@@ -194,11 +183,6 @@ sup {
 .container {
   display: flex;
   width: 100%;
-}
-@media screen and (max-width: 650px) {
-  .container {
-    flex-direction: column;
-  }
 }
 footer {
   text-align: center;
@@ -223,6 +207,16 @@ nav {
   color: #000;
   z-index: 10;
   box-sizing: border-box;
+  position: relative;
+}
+nav::before {
+  content: '';
+  width: 100%;
+  background: white;
+  height: 10rem;
+  position: fixed;
+  top: -10rem;
+  z-index: 1000;
 }
 .nav-ham {
   position: absolute;
@@ -265,22 +259,17 @@ nav a {
 .content-main {
   overflow: hidden;
 }
-.content-main.sidebar--open .content-inner {
+.sidebar--open .content-inner {
   left: 33vw;
 }
-@media screen and (max-width: 650px) {
-  .content-main.sidebar--open .content-inner {
-    left: 50vw;
-  }
-  .sidebar {
-    width: 50vw;
-  }
-  .one-third.border-right {
-    border-right: none;
-  }
-  .nobordermobile {
-    border: none;
-  }
+nav .close {
+  display: none;
+}
+.sidebar--open nav .close {
+  display: block;
+}
+.sidebar--open nav .hamburg {
+  display: none;
 }
 .content-inner {
   position: relative;
@@ -327,6 +316,20 @@ nav a {
 .home-container__right .fey-poster {
   display: none;
 }
+.home-text-inner {
+  max-width: 22em;
+  padding: 1rem 0;
+}
+
+
+
+
+/*
+
+  mobile overrides
+
+*/
+
 @media screen and (min-width: 650px) {
   .home-container__right {
     flex-basis: 33%;
@@ -343,7 +346,32 @@ nav a {
     border: none;
   }
 }
-.home-text-inner {
-  max-width: 22em;
-  padding: 1rem 0;
+@media screen and (max-width: 650px) {
+  .sidebar--open .content-inner {
+    left: 50vw;
+  }
+  .sidebar {
+    width: 50vw;
+    position: fixed;
+    /* z-index: 10; */
+  }
+  .one-third.border-right {
+    border-right: none;
+  }
+  .nobordermobile {
+    border: none;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .content-main {
+    overflow: visible;
+    margin-top: 9rem;
+  }
+  body {
+    overflow: visible;
+  }
+  nav {
+    position: fixed;
+  }
 }

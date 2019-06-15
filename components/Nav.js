@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import Hamburg from './svg/ham';
+import Close from './svg/close';
 import Marquee from './Marquee';
 
 const ticketsLink = "https://www.weezevent.com/rencontre-fey-arts";
@@ -26,7 +27,8 @@ const Nav = props => (
       </div>
       <div className="nav-logo">
         <div className="nav-ham" onClick={ props.onHamClick }>
-          <Hamburg />
+          <Hamburg className="hamburg" />
+          <Close className="close" />
         </div>
         <a href="/">
           <img src="/static/fey-logo.png" />

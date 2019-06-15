@@ -9,5 +9,5 @@ const svg = `
 `;
 
 export default props => (
-  <span dangerouslySetInnerHTML={{ __html: svg }} style={{ position: 'relative', top: '0.2em'}}/>
+  <span { ...props } dangerouslySetInnerHTML={{ __html: svg }} style={{ position: 'relative', top: '0.2em'}}/>
 )
