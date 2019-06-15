@@ -287,9 +287,13 @@ nav .close {
   background: white;
   height: 100%;
   box-sizing: border-box;
+  opacity: 0;
 }
 .sidebar .nav-item {
   padding-bottom: 0.8em;
+}
+.sidebar--open .sidebar {
+  opacity: 1;
 }
 
 .container img {
