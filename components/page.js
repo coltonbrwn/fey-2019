@@ -12,21 +12,25 @@ const contentQuery = slug => `*[_type == "pages" && slug.current == "${ slug }"]
   title,
   textblocks,
   images
-}[0...1]
-`;
+}[0...1]`;
 const globalQuery = `*[_type == "global"] {
   _id,
   text,
   title
-}
-`;
+}`;
+const navQuery = `*[_type == "pages"] {
+  _id,
+  title,
+  slug
+}`
 
-export default class Home extends React.Component {
+export default class Page extends React.Component {
 
   static async getInitialProps() {
     return {
       content: await sanity.fetch(contentQuery(this.slug)),
-      global: await sanity.fetch(globalQuery)
+      global: await sanity.fetch(globalQuery),
+      nav: await sanity.fetch(navQuery)
     }
   }
 

@@ -244,6 +244,10 @@ nav {
   padding: 1.4rem 0;
   box-sizing: border-box;
 }
+.marquee a:hover * {
+  text-decoration: underline;
+}
+
 .nav-logo {
   text-align: center;
   padding: 0.6rem;
@@ -261,12 +265,25 @@ nav a {
   text-align: center;
 }
 
-
 .content-main {
   overflow: hidden;
 }
 .content-main.sidebar--open .content-inner {
   left: 33vw;
+}
+@media screen and (max-width: 650px) {
+  .content-main.sidebar--open .content-inner {
+    left: 50vw;
+  }
+  .sidebar {
+    width: 50vw;
+  }
+  .one-third.border-right {
+    border-right: none;
+  }
+  .nobordermobile {
+    border: none;
+  }
 }
 .content-inner {
   position: relative;
@@ -284,7 +301,9 @@ nav a {
   background: white;
   height: 100%;
   box-sizing: border-box;
-  border-right: 1px solid black;
+}
+.sidebar .nav-item {
+  padding-bottom: 0.8em;
 }
 
 .container img {
@@ -326,9 +345,6 @@ nav a {
   .noborderdesk {
     border: none;
   }
-}
-.home-container__right h1 {
-
 }
 .home-text-inner {
   max-width: 22em;

@@ -61,10 +61,10 @@ export default class Home extends React.Component {
 
         </Head>
         <div id="main">
-          <Nav {...this.props } onHamClick={ this.onHamClick } />
+          <Nav { ...this.props } onHamClick={ this.onHamClick } />
           <div className={`content-main ${ this.state.isNavOpen && 'sidebar--open' }`}>
-            <Sidebar />
-            <div className="content-inner">
+            <Sidebar { ...this.props }/>
+            <div className="content-inner border-left border-right">
               { this.props.children }
             </div>
           </div>

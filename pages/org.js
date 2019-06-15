@@ -5,12 +5,12 @@ import BlockContent from '@sanity/block-content-to-react'
 import BilingualBlock from '../components/BilingualBlock';
 import FeyWindow from '../components/FeyWindow';
 import Layout from '../components/Layout';
-import Page from '../components/page'
-import Social from '../components/social.js'
+import Page from '../components/Page'
+import Social from '../components/Social.js'
 
-export default class Home extends Page {
+export default class Org extends Page {
 
-  static slug = 'non-profit'
+  static slug = 'org'
 
   render() {
     const title = this.props.content[0].title;
@@ -18,7 +18,7 @@ export default class Home extends Page {
     const images = this.props.content[0].images;
 
     return (
-      <Layout global={ this.props.global }>
+      <Layout { ...this.props }>
         <div className="container border-bottom">
           <div className="pad">
             <h3>{ title }</h3>

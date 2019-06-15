@@ -6,8 +6,8 @@ import BilingualBlock from '../components/BilingualBlock';
 import FeyWindow from '../components/FeyWindow';
 import Layout from '../components/Layout';
 import FeyPoster from '../components/FeyPoster';
-import Social from '../components/social';
-import Page from '../components/page'
+import Social from '../components/Social';
+import Page from '../components/Page'
 
 export default class Home extends Page {
 
@@ -16,9 +16,9 @@ export default class Home extends Page {
   render() {
     const homepageContent = this.props.content[0].textblocks[0];
     return (
-      <Layout global={ this.props.global }>
+      <Layout { ...this.props }>
         <div className="container border-bottom">
-          <div className="home-container__left border-right border-left">
+          <div className="home-container__left border-right nobordermobile">
             <div className="pad border-bottom noborderdesk">
               <FeyWindow
                 shape="oval"
@@ -43,7 +43,7 @@ export default class Home extends Page {
               <Social />
             </div>
           </div>
-          <div className="home-container__right border-right">
+          <div className="home-container__right border-right nobordermobile">
             <div className="flex flex--column h-100">
               <div className="border-bottom rel">
                 <FeyPoster />
