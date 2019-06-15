@@ -199,9 +199,6 @@ sup {
   .container {
     flex-direction: column;
   }
-  .home-container__right {
-    border-left: 1px solid #888;
-  }
 }
 footer {
   text-align: center;

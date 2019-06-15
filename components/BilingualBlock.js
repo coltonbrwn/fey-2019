@@ -15,7 +15,7 @@ export default class BilingualBlock extends React.Component {
               />
             </div>
           </div>
-          <div className={`pad border-right ${ !this.props.fullw && 'one-third' }`}>
+          <div className={`pad border-right ${ !this.props.fullw ? 'one-third' : 'noborderdesk nobordermobile' }`}>
             <p className="bilingual-title">{ this.props.textblock.title_fr }</p>
             <div className={`bilingual-block ${ this.props.noindent && 'noindent' }`}>
               <BlockContent

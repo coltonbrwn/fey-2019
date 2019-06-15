@@ -43,7 +43,7 @@ export default class Home extends Page {
               <Social />
             </div>
           </div>
-          <div className="home-container__right border-right nobordermobile">
+          <div className="home-container__right">
             <div className="flex flex--column h-100">
               <div className="border-bottom rel">
                 <FeyPoster />
