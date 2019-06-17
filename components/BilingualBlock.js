@@ -11,7 +11,7 @@ export default class BilingualBlock extends React.Component {
             <p className="bilingual-title">{ this.props.textblock.title_en }</p>
             <div className={`bilingual-block ${ this.props.noindent && 'noindent' }`}>
               <BlockContent
-                blocks={ this.props.textblock.body_en[0] }
+                blocks={ this.props.textblock.body_en }
               />
             </div>
           </div>
@@ -19,7 +19,7 @@ export default class BilingualBlock extends React.Component {
             <p className="bilingual-title">{ this.props.textblock.title_fr }</p>
             <div className={`bilingual-block italic ${ this.props.noindent && 'noindent' }`}>
               <BlockContent
-                blocks={ this.props.textblock.body_fr[0] }
+                blocks={ this.props.textblock.body_fr }
               />
             </div>
           </div>
