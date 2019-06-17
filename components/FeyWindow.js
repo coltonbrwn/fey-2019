@@ -24,7 +24,9 @@ export default class FeyWindow extends React.Component {
     const aspectRatio = aspect ? parseFloat(aspect) : 1;
     const width = Math.floor(this.state.elementWidth);
     const height = Math.floor(width / aspectRatio);
-    return imageBuilder.size(width, height).url();
+    const baseURL = imageBuilder.size(width, height).url();
+    const cfUrl = baseURL.replace('cdn.sanity.io', 'd38tzjzftfz9b8.cloudfront.net');
+    return cfUrl
   }
 
   render() {
