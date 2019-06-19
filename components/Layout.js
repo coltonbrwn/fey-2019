@@ -58,6 +58,7 @@ export default class Home extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600&display=swap" rel="stylesheet"/>
           <link rel="stylesheet" href="/static/style.css" />
+          <link rel="icon" href="/static/favicon.png" sizes="32x32" />
 
         </Head>
         <div id="main" className={ this.state.isNavOpen && 'sidebar--open' }>

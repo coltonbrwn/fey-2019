@@ -30,9 +30,11 @@ const Nav = props => (
           <Hamburg className="hamburg" />
           <Close className="close" />
         </div>
-        <a href="/">
-          <img src="/static/fey-logo.png" />
-        </a>
+        <div className="logo-container">
+          <a href="/">
+            <img src="/static/fey-logo.png" />
+          </a>
+        </div>
       </div>
     </nav>
   </div>
