@@ -39,6 +39,15 @@ export default class Home extends Page {
           </div>
         </div>
 
+        {
+          content[2] && (
+            <div className="container border-bottom">
+              <div className="one-third pad border-right"></div>
+              <BilingualBlock textblock={ content[2] }  noindent />
+            </div>
+          )
+        }
+
         <Social />
       </Layout>
     )

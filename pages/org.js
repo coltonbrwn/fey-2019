@@ -61,7 +61,6 @@ export default class Org extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const title = this.props.content[0].title;
     const content = this.props.content[0].textblocks;
     const donorImages = this.props.donorImages[0];
@@ -83,6 +82,15 @@ export default class Org extends React.Component {
           <div className="one-third pad border-right"></div>
           <BilingualBlock textblock={ content[1] } />
         </div>
+
+        {
+          content[2] && (
+            <div className="container border-bottom">
+              <div className="one-third pad border-right"></div>
+              <BilingualBlock textblock={ content[2] } />
+            </div>
+          )
+        }
 
         <div className="container border-bottom">
           <div className="one-third pad border-right">
