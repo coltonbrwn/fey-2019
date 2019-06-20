@@ -258,8 +258,12 @@ nav a {
 }
 
 .content-main {
+  overflow: scroll;
+}
+#main.sidebar--open .content-main {
   overflow: hidden;
 }
+
 .sidebar--open .content-inner {
   left: 33vw;
 }
@@ -276,7 +280,8 @@ nav .close {
   position: relative;
   left: 0;
   height: 100%;
-  overflow-y: scroll;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   transition: 300ms left;
   background: white;
   z-index: 1;
