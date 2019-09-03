@@ -32,6 +32,7 @@ const Footer = props => (
         </div>
       </div>
     </div>
+    <div id="copyright-footer"><p>Copyright 2019 © Feÿ</p></div>
   </footer>
 );
 
