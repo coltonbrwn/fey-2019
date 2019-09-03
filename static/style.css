@@ -13,6 +13,42 @@ html {
   }
 }
 
+@font-face {
+    font-family: 'Century Expand';
+    src: url('fonts/bitstream_-_centuryexpd_bt_bold_italic-webfont.woff2') format('woff2'),
+         url('fonts/bitstream_-_centuryexpd_bt_bold_italic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Century Expand';
+    src: url('fonts/bitstream_-_centuryexpd_bt_bold-webfont.woff2') format('woff2'),
+         url('fonts/bitstream_-_centuryexpd_bt_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Century Expand';
+    src: url('fonts/bitstream_-_centuryexpd_bt_italic-webfont.woff2') format('woff2'),
+         url('fonts/bitstream_-_centuryexpd_bt_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Century Expand';
+    src: url('fonts/bitstream_-_centuryexpd_bt_roman-webfont.woff2') format('woff2'),
+         url('fonts/bitstream_-_centuryexpd_bt_roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 img {
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -24,7 +60,7 @@ img {
 body {
   overflow: hidden;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Century Expand';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;;
@@ -81,15 +117,27 @@ sup {
   text-transform: uppercase;
   margin-bottom: 0;
 }
-.bilingual-block {
-  text-indent: 3em;
+@media screen and (max-width: 500px) {
+  .bilingual-block {
+    text-indent: 0em;
+  }
 }
+@media screen and (min-width: 501px) {
+  .bilingual-block {
+    text-indent: 3em;
+  }
+}
+
 .bilingual-block.noindent {
   text-indent: 0;
   padding-top: 1em;
 }
 
-
+#copyright-footer {
+  opacity: 1;
+  border-top: 1px solid #888;
+  text-align: center;
+}
 #main {
   height: 100vh;
   display: flex;

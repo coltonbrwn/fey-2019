@@ -2,12 +2,23 @@ import Head from 'next/head'
 import Nav from './Nav.js';
 import Footer from './Footer.js';
 import Sidebar from './Sidebar.js';
+import ReactPixel from 'react-facebook-pixel';
 
 const social_img_url = 'http://fey-arts.com/static/social-wide.jpg';
 const title = 'Fey — A multidisciplinary arts festival in Bourgogne. 20-22 September 2019';
 const description = 'Multidisciplinary arts festival in Bourgogne';
+const options = {
+    autoConfig: true, 	// set pixel's autoConfig
+    debug: false, 		// enable logs
+};
+
 
 export default class Home extends React.Component {
+  
+  componentDidMount() {
+    ReactPixel.init('222158198723007', options);
+    ReactPixel.pageView();
+}
 
   constructor() {
     super();
@@ -21,7 +32,6 @@ export default class Home extends React.Component {
       isNavOpen: !this.state.isNavOpen
     });
   }
-
   render () {
     return (
       <div>
@@ -71,6 +81,7 @@ export default class Home extends React.Component {
           </div>
         </div>
       </div>
+
     )
   }
 }
