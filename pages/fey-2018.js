@@ -79,8 +79,7 @@ export default class Org extends React.Component {
           <div className="one-third pad border-right">
           </div>
           <div className="flex-2">
-          <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://d28ojbm69hui9s.cloudfront.net/prod/uploads/28903117105800714207634404081664/DzakqFdjEAiNYnXpzvr5-E-EKenY9WVS5XGUYUXn0IQ=-3B7E16F2-44E9-4B64-B617-4EE4724755D0@nyc.rr.com.pdf" style={{width:"100%",height:"50vh",border:"0px"}}>
-          </embed>
+          <img src='../static/poster-min.png' style={{height:"auto",width:"100%"}}></img>
           </div>
         </div>
 
